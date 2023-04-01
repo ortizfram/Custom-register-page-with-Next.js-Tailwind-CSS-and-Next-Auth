@@ -2,7 +2,16 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["media.graphassets.com", "lh3.googleusercontent.com"],
+    domains: [
+      "media.graphassets.com",
+      // google avatar
+      "lh3.googleusercontent.com",
+      // twitter avatar
+      "pbs.twimg.com",
+      // github avatar
+      "avatars.githubusercontent.com",
+      // email avatar...
+    ],
   },
 };
 module.exports = nextConfig;
