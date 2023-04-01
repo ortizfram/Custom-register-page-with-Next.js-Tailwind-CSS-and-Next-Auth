@@ -1,4 +1,9 @@
 import NextAuth from "next-auth/next";
+// add mongo adapter
+import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
+// import client promise
+import { clientPromise } from "lib/mongodb";
+// providers
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import TwitterProvider from "next-auth/providers/twitter";
@@ -6,6 +11,7 @@ import TwitterProvider from "next-auth/providers/twitter";
 // add other providers definitions...
 
 export default NextAuth({
+  adapter: MongoDBAdapter(clientPromise),
   // Configure one or more authentication providers
   providers: [
     // EmailProvider({
