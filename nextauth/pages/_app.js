@@ -8,7 +8,9 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <div className="flex items-center justify-center h-screen bg-indigo-100">
+        <Component {...pageProps} />
+      </div>
     </SessionProvider>
   );
 }
